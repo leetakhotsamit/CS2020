@@ -1,0 +1,15 @@
+## Question 1
+
+def cs116_grade(assign, mid, fin, part):
+  assign_weight = 0.2
+  mid_weight = 0.3
+  fin_weight = 0.45
+  part_weight = 0.05
+  exam_avg = (assign * assign_weight + fin * fin_weight)/ 75
+  grade = (assign * assign_weight) + (mid * mid_weight) + (fin * fin_weight) + (part * part_weight)
+  if exam_avg >= 0.5:
+    return round(grade)
+  else:
+   return (min(45, grade))
+
+print(cs116_grade(75,60,80,90))
